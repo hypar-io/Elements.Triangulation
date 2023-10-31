@@ -15,3 +15,8 @@ public static List<Profile> ComputeVoronoiPolygons(IList<Vector3> points, Profil
 
 ### Returns
 - `List<Profile>`: A list of `Profile` objects representing Voronoi polygons.
+
+
+# Building the project
+
+This project assumes you have cloned `voronator-sharp` and put it adjacent to this project. After that, `dotnet build` should suffice.

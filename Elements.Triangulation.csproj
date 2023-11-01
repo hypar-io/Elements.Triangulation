@@ -12,10 +12,11 @@
     <PackageId>Elements.Triangulation</PackageId>
     <PackageProjectUrl>
       https://github.com/hypar-io/Elements.Triangulation</PackageProjectUrl>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Andrew Heumann</Authors>
     <Company>Hypar</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>Readme.md</PackageReadmeFile>
   </PropertyGroup>
   <ItemGroup>
     <None Include=".\Readme.md" Pack="true" PackagePath="\" />
@@ -23,11 +24,13 @@
 
   <ItemGroup>
     <PackageReference Include="Hypar.Elements" Version="2.1.0" />
-    <!-- <ProjectReference Include="..\Elements\Elements\src\Elements.csproj" /> -->
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../voronator-sharp/src/VoronatorSharp/VoronatorSharp.csproj" />
+    <ProjectReference Include="../voronator-sharp/src/VoronatorSharp/VoronatorSharp.csproj">
+      <IncludeAssets>all</IncludeAssets>
+      <PrivateAssets>none</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>

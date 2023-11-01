@@ -12,7 +12,7 @@
     <PackageId>Elements.Triangulation</PackageId>
     <PackageProjectUrl>
       https://github.com/hypar-io/Elements.Triangulation</PackageProjectUrl>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Andrew Heumann</Authors>
     <Company>Hypar</Company>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -27,10 +27,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../voronator-sharp/src/VoronatorSharp/VoronatorSharp.csproj">
+    <!-- If we do this, the nuget package will fail to load, as it always wants to resolve a reference from another nuget package. we have to use the hard-coded DLL instead. -->
+    <!-- <ProjectReference Include="../voronator-sharp/src/VoronatorSharp/VoronatorSharp.csproj">
       <IncludeAssets>all</IncludeAssets>
       <PrivateAssets>none</PrivateAssets>
-    </ProjectReference>
+    </ProjectReference> -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Add a direct reference to the DLL -->
+    <Reference Include="VoronatorSharp">
+      <HintPath>./dependencies/VoronatorSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Include the DLL in the NuGet package -->
+    <Content Include="./dependencies/VoronatorSharp.dll" Pack="true" PackagePath="lib/net6.0" />
   </ItemGroup>
 
 </Project>

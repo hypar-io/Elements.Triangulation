@@ -2,7 +2,7 @@
 
 This library is currently a very thin wrapper around the [VoronatorSharp](https://github.com/BorisTheBrave/voronator-sharp) project. 
 
-It exposes a single method, `Elements.Triangulation.Trinagulation.ComputeVoronoiPolygons`, which computes the voronoi diagram of the provided points.
+It exposes a single method, `Elements.Triangulation.Triangulation.ComputeVoronoiPolygons`, which computes the voronoi diagram of the provided points.
 
 ## Method Signature
 ```csharp
